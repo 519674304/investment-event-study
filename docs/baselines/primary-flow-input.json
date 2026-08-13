@@ -1,0 +1,32 @@
+{
+  "researchObjectSelection": {
+    "query": "884275",
+    "candidateId": "candidate-ths-884275",
+    "name": "生猪养殖",
+    "code": "884275",
+    "type": "concept_index"
+  },
+  "chartRequest": {
+    "startDate": "2026-06-01",
+    "endDate": "2026-08-12",
+    "period": "day"
+  },
+  "informationSearch": {
+    "triggeredByUser": true,
+    "additionalKeywords": ["能繁母猪"],
+    "page": 1,
+    "pageSize": 20
+  },
+  "confirmedEventDraft": {
+    "draftId": "search-result-20260809-pork-price",
+    "publishedOn": "2026-08-09",
+    "title": "7月居民猪肉价格环比上涨",
+    "summary": "7月居民猪肉价格环比上涨4.1%。",
+    "sourceName": "公开信息来源",
+    "sourceUrl": "https://example.com/source-article",
+    "categoryId": "product-price",
+    "tags": ["猪肉零售价"],
+    "linkedResearchObjectCodes": ["884275"]
+  }
+}
+

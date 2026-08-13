@@ -1,0 +1,1 @@
+"""Investment event study application."""
