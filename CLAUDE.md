@@ -63,7 +63,7 @@ The roadmap (`docs/plans/00-roadmap.md`) is milestones M0→M6. Only M0/M1 are b
 - ✅ Frontend shell: object catalog sidebar + event list under a placeholder chart (`frontend/src/App.tsx`).
 - ❌ Market data (M2), K-line chart + event projection (M3), information search (M4), and Windows packaging (M5) are **not** implemented. The chart is a hardcoded placeholder; there are no external data-source adapters yet.
 
-Wiring gap to know about: the backend does not yet serve the built frontend, and `vite.config.ts` has no dev proxy — so `pnpm dev`'s relative `/api/*` calls will not reach the API without adding one. The single-process serving model is planned but not wired up.
+Wiring gap to know about: the backend does not yet serve the built frontend (no `StaticFiles` mount in `app.py`), so the single-process serving model from ARCH-TECHNICAL is not wired up yet. `vite.config.ts` **does** proxy `/api` → `http://127.0.0.1:8000`, so in development run `uvicorn` (backend) and `pnpm dev` (frontend) together and the relative `/api/*` calls reach the API.
 
 ## Domain rules that are easy to get wrong
 
