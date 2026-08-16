@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//tmp/**)",
+      "Bash(tar xzf *)",
+      "Bash(cd /tmp/skill-repo/skill-main && cat SKILL.md)",
+      "Read(//tmp/skill-repo/**)",
+      "Bash(echo \"HOME=$HOME\"; ls -la ~/.claude/ 2>/dev/null | head -30; echo \"---skills---\"; ls -la ~/.claude/skills/ 2>/dev/null || echo \"no skills dir yet\")",
+      "Read(//c/Users/51967/.claude/**)",
+      "Bash(cd /tmp/skill-repo/skill-main && echo \"=== README ===\" && cat README.md && echo \"\" && echo \"=== agents/openai.yaml ===\" && cat agents/openai.yaml)",
+      "Bash(head -5 ~/.claude/skills/project-inception/SKILL.md | cat -A | head -5)",
+      "Read(//c/Users/51967/.claude/skills/project-inception/**)",
+      "Bash(tar tzf *)",
+      "Bash(grep '^superpowers-main/skills/[^/]*/$')",
+      "Bash(grep -vE '/$')",
+      "Bash(bash ~/.claude/hooks/superpowers-session-start.sh)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(python -c \"import json,sys; d=json.load\\(open\\('/tmp/hook-output.json',encoding='utf-8'\\)\\); print\\('VALID JSON'\\); print\\('keys:', list\\(d.keys\\(\\)\\)\\); print\\('has additionalContext:', 'additionalContext' in d.get\\('hookSpecificOutput',{}\\)\\)\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\('fs'\\).readFileSync\\('/tmp/hook-output.json','utf8'\\)\\); console.log\\('VALID JSON'\\); console.log\\('keys:', Object.keys\\(d\\)\\); console.log\\('has additionalContext:', !!d.hookSpecificOutput?.additionalContext\\); console.log\\('context length:', d.hookSpecificOutput.additionalContext.length\\);\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\('fs'\\).readFileSync\\(process.env.HOME + '/.claude/hooks/superpowers-session-start.sh','utf8'\\)\\); void d\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',c=>s+=c\\);process.stdin.on\\('end',\\(\\)=>{const d=JSON.parse\\(s\\);console.log\\('VALID JSON'\\);console.log\\('keys:',Object.keys\\(d\\)\\);console.log\\('has additionalContext:',!!d.hookSpecificOutput?.additionalContext\\);console.log\\('context length:',d.hookSpecificOutput.additionalContext.length\\);}\\)\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\51967\\.claude\\hooks",
+      "C:\\Users\\51967\\.claude"
+    ]
+  }
+}
